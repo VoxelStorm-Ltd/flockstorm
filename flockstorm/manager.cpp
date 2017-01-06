@@ -73,6 +73,17 @@ void manager::distribute_boids_randomly(aabb3f const &bounding_box, std::mt19937
   }
   populate_grids();
 }
+void manager::set_goal_position_randomly(aabb3f const &bounding_box, std::mt19937::result_type seed) {
+  /// Position the goal randomly within the specified bounding box
+  #ifdef DEBUG_FLOCKSTORM
+    std::cout << "FlockStorm: DEBUG: Positioning goal randomly within the range " << bounding_box << " with seed " << seed << std::endl;
+  #endif // DEBUG_FLOCKSTORM
+  std::mt19937 rng(seed);
+  vec3<std::uniform_real_distribution<float>> pos_dist(std::uniform_real_distribution<float>{bounding_box.min.x, bounding_box.max.x},
+                                                       std::uniform_real_distribution<float>{bounding_box.min.y, bounding_box.max.y},
+                                                       std::uniform_real_distribution<float>{bounding_box.min.z, bounding_box.max.z});
+  goal_position.assign(pos_dist.x(rng), pos_dist.y(rng), pos_dist.z(rng));
+}
 
 vec3f const &manager::get_position(unsigned int id) {
   #ifndef NDEBUG

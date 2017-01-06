@@ -19,7 +19,7 @@ void boid::update(unsigned int boid_id, vec3f const &position) {
     // remove the boid id from the last cell it was in
     auto const &old_grid_cell_it(grid.find(occupied_cells[boid_id]));
     #ifndef NDEBUG
-      if(old_grid_cell_it == grid.end()) {             // safety check
+      if(old_grid_cell_it == grid.end()) {                                      // safety check
         std::cout << "ERROR: Boid " << boid_id << " had empty old grid cell - this should never happen!" << std::endl;
       }
     #endif // NDEBUG

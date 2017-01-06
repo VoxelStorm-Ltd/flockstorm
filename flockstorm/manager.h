@@ -65,6 +65,7 @@ public:
 
   void add_obstacle(vec3f const &this_position, float this_radius);
   void distribute_boids_randomly(aabb3f const &bounding_box, std::mt19937::result_type seed = 0);
+  void set_goal_position_randomly(aabb3f const &bounding_box, std::mt19937::result_type seed = 0);
 
   #ifdef NDEBUG
     vec3f const &get_position(unsigned int boid_id)     __attribute__((__pure__));
