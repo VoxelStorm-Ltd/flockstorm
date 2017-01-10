@@ -2,7 +2,6 @@
 #include <iostream>
 #include "vectorstorm/aabb/aabb3.h"
 #include "memorystorm/memorystorm.h"
-#include "grid/get_cell.h"
 
 namespace flockstorm {
 
@@ -130,25 +129,53 @@ std::vector<unsigned int> manager::get_grid_neighbour_boids(vec3i const &our_gri
 
 void manager::populate_grids() {
   /// Populate the grids
+  #ifdef DEBUG_FLOCKSTORM
+    std::cout << "FlockStorm: DEBUG: Updating grids" << std::endl;
+  #endif // DEBUG_FLOCKSTORM
+
   collision_avoidance_obstacle_grid.clear();
   collision_avoidance_grid.clear();
   velocity_matching_grid.clear();
   flock_centering_grid.clear();
 
-  // TODO: obstacles
+  // fixed obstacle grids
+  for(unsigned int i = 0; i != obstacles.spheres.size(); ++i) {
+    auto const &obstacle(obstacles.spheres[i]);
+    float const bounding_box_radius = obstacle.radius + collision_avoidance_obstacle_grid.scale;
+    aabb3f const obstacle_bounds(obstacle.position - bounding_box_radius,
+                                 obstacle.position + bounding_box_radius);
+    aabb3i const obstacle_bounds_grid(collision_avoidance_obstacle_grid.get_cell(obstacle_bounds.min),
+                                      collision_avoidance_obstacle_grid.get_cell(obstacle_bounds.max));
+    vec3i cell;
+    float bounding_box_radius_padded_sq = bounding_box_radius + (collision_avoidance_obstacle_grid.scale * 0.5f);
+    bounding_box_radius_padded_sq *= bounding_box_radius_padded_sq;
+    for(cell.x = obstacle_bounds_grid.min.x; cell.x != obstacle_bounds_grid.max.x; ++cell.x) {
+      for(cell.y = obstacle_bounds_grid.min.y; cell.y != obstacle_bounds_grid.max.y; ++cell.y) {
+        for(cell.z = obstacle_bounds_grid.min.z; cell.z != obstacle_bounds_grid.max.z; ++cell.z) {
+          vec3f const cell_centre_coords((vec3f(cell) + 0.5f) * collision_avoidance_obstacle_grid.scale);
+          float const dist_sq = (cell_centre_coords - obstacle.position).length_sq();
+          if(dist_sq <= bounding_box_radius_padded_sq) {
+            collision_avoidance_obstacle_grid.grid[cell].emplace_back(i);
+          }
+        }
+      }
+    }
+  }
+
+  // boid grids
   for(unsigned int i = 0; i != num_boids; ++i) {
     {
-      vec3i const collision_avoidance_grid_cell(grid::get_cell(positions[i], collision_avoidance_grid.scale));
+      vec3i const collision_avoidance_grid_cell(collision_avoidance_grid.get_cell(positions[i]));
       collision_avoidance_grid.occupied_cells[i] = collision_avoidance_grid_cell;
       collision_avoidance_grid.grid[collision_avoidance_grid_cell].emplace_back(i);
     }
     {
-      vec3i const velocity_matching_grid_cell(grid::get_cell(positions[i], velocity_matching_grid.scale));
+      vec3i const velocity_matching_grid_cell(velocity_matching_grid.get_cell(positions[i]));
       velocity_matching_grid.occupied_cells[i] = velocity_matching_grid_cell;
       velocity_matching_grid.grid[velocity_matching_grid_cell].emplace_back(i);
     }
     {
-      vec3i const flock_centering_grid_cell(grid::get_cell(positions[i], flock_centering_grid.scale));
+      vec3i const flock_centering_grid_cell(flock_centering_grid.get_cell(positions[i]));
       flock_centering_grid.occupied_cells[i] = flock_centering_grid_cell;
       flock_centering_grid.grid[flock_centering_grid_cell].emplace_back(i);
     }
@@ -192,15 +219,28 @@ void manager::update() {
     auto &acceleration = accelerations[i];
     acceleration.assign();
 
-    // calculate collision avoidance acceleration from external obstacles
-    for(auto const &obstacle : obstacles.spheres) {
-      // TODO: search only neighbouring grid cells
-      float const dist_centre_sq = (obstacle.position - position).length_sq();
-      if(dist_centre_sq < obstacle.collision_avoidance_range_sq) {
-        float dist_sq = (obstacle.position - position).length() - obstacle.radius;
-        dist_sq *= dist_sq;
-        float const acc = collision_avoidance_scale / dist_sq;
-        acceleration += (obstacle.position - position).normalise_copy() * -acc; // division by zero possible - assuming we never overlap the centre of an obstacle
+    {
+      // calculate collision avoidance acceleration from external obstacles
+      #ifndef NDEBUG
+        if(!obstacles.spheres.empty()) {
+          if(collision_avoidance_obstacle_grid.grid.empty()) {
+            std::cout << "FlockStorm: ERROR: Obstacles exist, but obstacle grid is unpopulated - don't forget to run populate_grids()!" << std::endl;
+          }
+        }
+      #endif // NDEBUG
+      vec3i const collision_avoidance_grid_cell(collision_avoidance_obstacle_grid.get_cell(positions[i]));
+      auto const &it(collision_avoidance_obstacle_grid.grid.find(collision_avoidance_grid_cell));
+      if(it != collision_avoidance_obstacle_grid.grid.end()) {
+        for(auto const &obstacle_id : it->second) {
+          auto const &obstacle(obstacles.spheres[obstacle_id]);
+          float const dist_centre_sq = (obstacle.position - position).length_sq();
+          if(dist_centre_sq < obstacle.collision_avoidance_range_sq) {
+            float dist_sq = (obstacle.position - position).length() - obstacle.radius;
+            dist_sq *= dist_sq;
+            float const acc = collision_avoidance_scale / dist_sq;
+            acceleration += (obstacle.position - position).normalise_copy() * -acc; // division by zero possible - assuming we never overlap the centre of an obstacle
+          }
+        }
       }
     }
     if(acceleration.length_sq() > acceleration_max_sq) {                        // clamp acceleration to the maximum
@@ -214,7 +254,7 @@ void manager::update() {
 
     {
       // calculate collision avoidance acceleration from other boids
-      vec3i const collision_avoidance_grid_cell(grid::get_cell(positions[i], collision_avoidance_grid.scale));
+      vec3i const collision_avoidance_grid_cell(collision_avoidance_grid.get_cell(positions[i]));
       // TODO: combine the above with the grid update below
       for(unsigned int j : get_grid_neighbour_boids(collision_avoidance_grid_cell, collision_avoidance_grid)) {
         if(j == i) {
@@ -240,10 +280,9 @@ void manager::update() {
       // calculate velocity matching acceleration
       vec3f flock_velocity;
       unsigned int flock_count = 0;
-      vec3i const velocity_matching_grid_cell(grid::get_cell(positions[i], velocity_matching_grid.scale));
+      vec3i const velocity_matching_grid_cell(velocity_matching_grid.get_cell(positions[i]));
       // TODO: combine the above with the grid update below
       for(unsigned int j : get_grid_neighbour_boids(velocity_matching_grid_cell, velocity_matching_grid)) {
-        // TODO: search only neighbouring grid cells
         if(j == i) {
           continue;
         }
@@ -272,10 +311,9 @@ void manager::update() {
       // calculate flock centering acceleration
       vec3f flock_centroid;
       unsigned int flock_count = 0;
-      vec3i const flock_centering_grid_cell(grid::get_cell(positions[i], flock_centering_grid.scale));
+      vec3i const flock_centering_grid_cell(flock_centering_grid.get_cell(positions[i]));
       // TODO: combine the above with the grid update below
       for(unsigned int j : get_grid_neighbour_boids(flock_centering_grid_cell, flock_centering_grid)) {
-        // TODO: search only neighbouring grid cells
         if(j == i) {
           continue;
         }

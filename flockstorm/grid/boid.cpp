@@ -14,7 +14,7 @@ boid::boid(unsigned int this_num_boids)
 
 void boid::update(unsigned int boid_id, vec3f const &position) {
   /// Update this grid for this boid's new position
-  vec3i const grid_cell(get_cell(position, scale));
+  vec3i const grid_cell(get_cell(position));
   if(occupied_cells[boid_id] != grid_cell) {
     // remove the boid id from the last cell it was in
     auto const &old_grid_cell_it(grid.find(occupied_cells[boid_id]));

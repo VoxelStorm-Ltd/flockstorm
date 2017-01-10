@@ -16,10 +16,9 @@ struct base {
   float scale = 1.0f;
   ///float scale_inv = 1.0f;
 
-  void clear() {
-    /// Clear this grid
-    grid.clear();
-  }
+  void clear();
+
+  vec3i get_cell(vec3f const &position) const;
 };
 
 }
