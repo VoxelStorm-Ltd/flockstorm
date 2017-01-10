@@ -52,9 +52,10 @@ void manager::update_precomputed_quantities() {
   #endif // NDEBUG
 };
 
-void manager::add_obstacle(vec3f const &this_position, float this_radius) {
-  /// Add a sphere obstacle
+size_t manager::add_obstacle_sphere(vec3f const &this_position, float this_radius) {
+  /// Helper to add a sphere obstacle with precomputed values and return its index
   obstacles.spheres.emplace_back(this_position, this_radius, collision_avoidance_range);
+  return obstacles.spheres.size() - 1;
 }
 
 void manager::distribute_boids_randomly(aabb3f const &bounding_box, std::mt19937::result_type seed) {
@@ -199,7 +200,7 @@ void manager::update() {
         float dist_sq = (obstacle.position - position).length() - obstacle.radius;
         dist_sq *= dist_sq;
         float const acc = collision_avoidance_scale / dist_sq;
-        acceleration += (obstacle.position - position).normalise_copy() * -acc;
+        acceleration += (obstacle.position - position).normalise_copy() * -acc; // division by zero possible - assuming we never overlap the centre of an obstacle
       }
     }
     if(acceleration.length_sq() > acceleration_max_sq) {                        // clamp acceleration to the maximum
@@ -222,7 +223,7 @@ void manager::update() {
         float const dist_sq = (positions[j] - position).length_sq();
         if(dist_sq < collision_avoidance_range_sq) {
           float const acc = collision_avoidance_scale / dist_sq;
-          acceleration += (positions[j] - position).normalise_copy() * -acc;
+          acceleration += (positions[j] - position).normalise_copy() * -acc;    // division by zero possible - assuming we never overlap another boid
         }
       }
     }
@@ -288,7 +289,7 @@ void manager::update() {
         flock_centroid /= static_cast<float>(flock_count);
         vec3f const offset_from_flock_centroid(flock_centroid - position);
         float const acc = flock_centering_scale / offset_from_flock_centroid.length_sq();
-        acceleration += offset_from_flock_centroid.normalise_copy() * acc;
+        acceleration += offset_from_flock_centroid.normalise_safe_copy() * acc;
       }
     }
     if(acceleration.length_sq() > acceleration_max_sq) {                        // clamp acceleration to the maximum
@@ -303,7 +304,7 @@ void manager::update() {
     {
       // calculate goal-seeking acceleration
       vec3f const offset_from_goal(goal_position - position);
-      acceleration += offset_from_goal.normalise_copy() * goal_seeking_scale;
+      acceleration += offset_from_goal.normalise_safe_copy() * goal_seeking_scale;
       //acceleration += offset_from_goal * goal_seeking_scale;
     }
     if(acceleration.length_sq() > acceleration_max_sq) {                        // clamp acceleration to the maximum

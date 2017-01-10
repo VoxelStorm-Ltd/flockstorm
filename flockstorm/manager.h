@@ -26,6 +26,13 @@ public:
   //float speed_limit_min           = 0.01f;
 
   vec3f goal_position;                                                          // the overall flock location goal
+  struct {
+    std::vector<obstacle::sphere> spheres;                                      // obstacle container - spheres
+
+    void clear() {
+      spheres.clear();
+    }
+  } obstacles;
 
 private:
   // pre-computed quantities
@@ -35,10 +42,6 @@ private:
   float acceleration_max_sq          = 0.0f;
   //float speed_limit_max_sq           = 0.0f;
   //float speed_limit_min_sq           = 0.0f;
-
-  struct {
-    std::vector<obstacle::sphere> spheres;                                      // obstacle container - spheres
-  } obstacles;
 
   // individual boid properties - use struct-of-arrays layout for speed
   #ifdef FLOCKSTORM_USE_STACK
@@ -63,7 +66,7 @@ public:
 
   void update_precomputed_quantities();
 
-  void add_obstacle(vec3f const &this_position, float this_radius);
+  size_t add_obstacle_sphere(vec3f const &this_position, float this_radius);
   void distribute_boids_randomly(aabb3f const &bounding_box, std::mt19937::result_type seed = 0);
   void set_goal_position_randomly(aabb3f const &bounding_box, std::mt19937::result_type seed = 0);
 

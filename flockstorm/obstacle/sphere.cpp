@@ -1,4 +1,7 @@
 #include "sphere.h"
+#ifdef DEBUG_FLOCKSTORM
+  #include <iostream>
+#endif // DEBUG_FLOCKSTORM
 
 namespace flockstorm {
 namespace obstacle {
