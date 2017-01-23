@@ -149,6 +149,9 @@ void manager::populate_grids() {
     vec3i cell;
     float bounding_box_radius_padded_sq = bounding_box_radius + (collision_avoidance_obstacle_grid.scale * 0.5f);
     bounding_box_radius_padded_sq *= bounding_box_radius_padded_sq;
+    #ifdef DEBUG_FLOCKSTORM
+      std::cout << "FlockStorm: DEBUG: obstacle " << i << " bounding box " << obstacle_bounds << std::endl;
+    #endif // DEBUG_FLOCKSTORM
     for(cell.x = obstacle_bounds_grid.min.x; cell.x != obstacle_bounds_grid.max.x; ++cell.x) {
       for(cell.y = obstacle_bounds_grid.min.y; cell.y != obstacle_bounds_grid.max.y; ++cell.y) {
         for(cell.z = obstacle_bounds_grid.min.z; cell.z != obstacle_bounds_grid.max.z; ++cell.z) {
@@ -156,6 +159,9 @@ void manager::populate_grids() {
           float const dist_sq = (cell_centre_coords - obstacle.position).length_sq();
           if(dist_sq <= bounding_box_radius_padded_sq) {
             collision_avoidance_obstacle_grid.grid[cell].emplace_back(i);
+            #ifdef DEBUG_FLOCKSTORM
+              std::cout << "FlockStorm: DEBUG: obstacle " << i << " is included in cell " << cell << std::endl;
+            #endif // DEBUG_FLOCKSTORM
           }
         }
       }
