@@ -37,7 +37,7 @@ void manager::update_precomputed_quantities() {
     it.update(collision_avoidance_range);
   }
 
-  #ifndef NDEBUG
+  #ifdef DEBUG_FLOCKSTORM
     std::cout << "FlockStorm: DEBUG: === Updated simulation values === " << std::endl;
     std::cout << "FlockStorm: DEBUG: collision_avoidance_range " << collision_avoidance_range << std::endl;
     std::cout << "FlockStorm: DEBUG: collision_avoidance_scale " << collision_avoidance_scale << std::endl;
@@ -48,7 +48,7 @@ void manager::update_precomputed_quantities() {
     std::cout << "FlockStorm: DEBUG: goal_seeking_scale        " << goal_seeking_scale << std::endl;
     std::cout << "FlockStorm: DEBUG: acceleration_max          " << acceleration_max << std::endl;
     std::cout << "FlockStorm: DEBUG: damping_factor            " << damping_factor << std::endl;
-  #endif // NDEBUG
+  #endif // DEBUG_FLOCKSTORM
 };
 
 size_t manager::add_obstacle_sphere(vec3f const &this_position, float this_radius) {
