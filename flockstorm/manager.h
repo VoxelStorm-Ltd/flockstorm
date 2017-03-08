@@ -71,14 +71,18 @@ public:
   void set_goal_position_randomly(aabb3f const &bounding_box, std::mt19937::result_type seed = 0);
 
   #ifdef NDEBUG
-    vec3f const &get_position(unsigned int boid_id)     __attribute__((__pure__));
-    vec3f const &get_velocity(unsigned int boid_id)     __attribute__((__pure__));
-    vec3f const &get_acceleration(unsigned int boid_id) __attribute__((__pure__));
+    vec3f const &get_position(    unsigned int boid_id) const __attribute__((__pure__));
+    vec3f const &get_velocity(    unsigned int boid_id) const __attribute__((__pure__));
+    vec3f const &get_acceleration(unsigned int boid_id) const __attribute__((__pure__));
   #else
-    vec3f const &get_position(unsigned int boid_id);
-    vec3f const &get_velocity(unsigned int boid_id);
-    vec3f const &get_acceleration(unsigned int boid_id);
+    vec3f const &get_position(    unsigned int boid_id) const;
+    vec3f const &get_velocity(    unsigned int boid_id) const;
+    vec3f const &get_acceleration(unsigned int boid_id) const;
   #endif // NDEBUG
+
+  void set_position(    unsigned int boid_id, vec3f const &new_position);
+  void set_velocity(    unsigned int boid_id, vec3f const &new_velocity);
+  void set_acceleration(unsigned int boid_id, vec3f const &new_acceleration);
 
   std::vector<unsigned int> get_grid_neighbour_boids(vec3i const &our_grid_square, grid::boid const &grid);
   void populate_grids();

@@ -85,25 +85,47 @@ void manager::set_goal_position_randomly(aabb3f const &bounding_box, std::mt1993
   goal_position.assign(pos_dist.x(rng), pos_dist.y(rng), pos_dist.z(rng));
 }
 
-vec3f const &manager::get_position(unsigned int id) {
-  #ifndef NDEBUG
-    return positions.at(id);                                                    // safe check in debug mode only
+vec3f const &manager::get_position(unsigned int boid_id) const {
+  #ifdef NDEBUG
+    return positions[boid_id];
   #else
-    return positions[id];
+    return positions.at(boid_id);                                               // safe check in debug mode only
   #endif // NDEBUG
 }
-vec3f const &manager::get_velocity(unsigned int id) {
-  #ifndef NDEBUG
-    return velocities.at(id);                                                   // safe check in debug mode only
+vec3f const &manager::get_velocity(unsigned int boid_id) const {
+  #ifdef NDEBUG
+    return velocities[boid_id];
   #else
-    return velocities[id];
+    return velocities.at(boid_id);                                              // safe check in debug mode only
   #endif // NDEBUG
 }
-vec3f const &manager::get_acceleration(unsigned int id) {
-  #ifndef NDEBUG
-    return accelerations.at(id);                                                // safe check in debug mode only
+vec3f const &manager::get_acceleration(unsigned int boid_id) const {
+  #ifdef NDEBUG
+    return accelerations[boid_id];
   #else
-    return accelerations[id];
+    return accelerations.at(boid_id);                                           // safe check in debug mode only
+  #endif // NDEBUG
+}
+
+void manager::set_position(unsigned int boid_id, vec3f const &new_position) {
+  #ifdef NDEBUG
+    positions[boid_id] = new_position;
+  #else
+    positions.at(boid_id) = new_position;                                       // safe check in debug mode only
+  #endif // NDEBUG
+}
+void manager::set_velocity(unsigned int boid_id, vec3f const &new_velocity) {
+  #ifdef NDEBUG
+    velocities[boid_id] = new_velocity;
+  #else
+    velocities.at(boid_id) = new_velocity;                                      // safe check in debug mode only
+  #endif // NDEBUG
+}
+void manager::set_acceleration(unsigned int boid_id, vec3f const &new_acceleration) {
+  #ifdef NDEBUG
+    accelerations[boid_id] = new_acceleration;
+  #else
+    accelerations.at(boid_id) = new_acceleration;                               // safe check in debug mode only
   #endif // NDEBUG
 }
 
