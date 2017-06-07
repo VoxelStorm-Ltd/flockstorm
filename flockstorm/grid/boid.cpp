@@ -1,5 +1,4 @@
 #include "boid.h"
-#include "get_cell.h"
 #ifndef NDEBUG
   #include <iostream>
 #endif // NDEBUG
