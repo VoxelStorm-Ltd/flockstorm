@@ -1,8 +1,7 @@
 #include "base.h"
 #include "get_cell.h"
 
-namespace flockstorm {
-namespace grid {
+namespace flockstorm::grid {
 
 void base::clear() {
   /// Clear this grid
@@ -14,5 +13,4 @@ vec3i base::get_cell(vec3f const &position) const {
   return grid::get_cell(position, scale);
 }
 
-}
 }

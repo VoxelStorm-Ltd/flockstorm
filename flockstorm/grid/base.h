@@ -6,8 +6,7 @@
 #include <boost/functional/hash.hpp>
 #include "vectorstorm/vector/vector3.h"
 
-namespace flockstorm {
-namespace grid {
+namespace flockstorm::grid {
 
 struct base {
   using cell = std::vector<unsigned int>;
@@ -21,7 +20,6 @@ struct base {
   vec3i get_cell(vec3f const &position) const;
 };
 
-}
 }
 
 #endif // FLOCKSTORM_GRID_BASE_H_INCLUDED

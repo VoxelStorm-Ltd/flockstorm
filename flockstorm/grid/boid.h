@@ -3,8 +3,7 @@
 
 #include "base.h"
 
-namespace flockstorm {
-namespace grid {
+namespace flockstorm::grid {
 
 struct boid : base {
   unsigned int const num_boids = 1000;
@@ -20,7 +19,6 @@ struct boid : base {
   void update(unsigned int boid_id, vec3f const &position);
 };
 
-}
 }
 
 #endif // FLOCKSTORM_GRID_BOID_INCLUDED

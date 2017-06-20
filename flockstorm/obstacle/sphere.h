@@ -3,8 +3,7 @@
 
 #include "vectorstorm/vector/vector3.h"
 
-namespace flockstorm {
-namespace obstacle {
+namespace flockstorm::obstacle {
 
 struct sphere {
   vec3f position;
@@ -16,7 +15,6 @@ struct sphere {
   void update(float boid_collision_avoidance_range);
 };
 
-}
 }
 
 #endif // FLOCKSTORM_OBSTACLE_SPHERE_H_INCLUDED

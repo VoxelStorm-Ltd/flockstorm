@@ -6,8 +6,7 @@
   #include <algorithm>
 #endif // VECTORSTORM_NO_BOOST
 
-namespace flockstorm {
-namespace grid {
+namespace flockstorm::grid {
 
 boid::boid(unsigned int this_num_boids)
   : num_boids(this_num_boids) {
@@ -50,5 +49,4 @@ void boid::update(unsigned int boid_id, vec3f const &position) {
   }
 }
 
-}
 }

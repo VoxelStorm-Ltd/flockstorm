@@ -3,8 +3,7 @@
   #include <iostream>
 #endif // DEBUG_FLOCKSTORM
 
-namespace flockstorm {
-namespace obstacle {
+namespace flockstorm::obstacle {
 
 sphere::sphere(vec3f const &this_position, float this_radius, float boid_collision_avoidance_range)
   : position(this_position),
@@ -21,5 +20,4 @@ void sphere::update(float boid_collision_avoidance_range) {
   collision_avoidance_range_sq *= collision_avoidance_range_sq;
 }
 
-}
 }
