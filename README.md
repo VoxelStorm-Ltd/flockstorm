@@ -7,6 +7,9 @@ To understand the original idea behind the "Boids" flocking simulation, refer to
 
 This documentation is limited in scope - as this is a component of a legacy game, it is released as open source without promise of ongoing support, but in the hope it will be useful.  Pull requests for extensions and optimisations are welcome.
 
+## Dependencies
+- [VectorStorm](https://github.com/VoxelStorm-Ltd/vectorstorm)
+
 ## Design
 
 This library uses a 3D grid, and tracks boid occupation within this grid, to minimise the number of interactions each frame.  It tries to be as light on CPU usage as possible, to allow the boids simulation to be used seamlessly within games for features such as visual bird flocks or schools of fish, without interfering with the primary CPU time budget.
