@@ -8,7 +8,9 @@ To understand the original idea behind the "Boids" flocking simulation, refer to
 This documentation is limited in scope - as this is a component of a legacy game, it is released as open source without promise of ongoing support, but in the hope it will be useful.  Pull requests for extensions and optimisations are welcome.
 
 ## Dependencies
+- Boost functional hash headers `<boost/functional/hash.hpp>`
 - [VectorStorm](https://github.com/VoxelStorm-Ltd/vectorstorm)
+- [MemoryStorm](https://github.com/VoxelStorm-Ltd/memorystorm)
 
 ## Design
 
