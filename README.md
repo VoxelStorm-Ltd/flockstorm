@@ -191,3 +191,8 @@ The following compile-time defines are available:
 
 - `DEBUG_FLOCKSTORM` - Extra debugging output (dumps computed values to console when `update_precomputed_quantities()` is called).
 - `FLOCKSTORM_USE_STACK` - Allocate all containers on the stack rather than the heap.
+
+
+## Demos
+
+- In-browser demo using WebGPU: https://github.com/Armchair-Software/boids-webgpu-demo
