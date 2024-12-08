@@ -30,7 +30,7 @@ Updating `goal_position` is very cheap, and can be done every frame without adde
 
 ## Example
 
-A basic example of usage - 
+A basic example of usage (details ommitted) - 
 
 ```cpp
 #include <flockstorm/flockstorm.h>
@@ -38,19 +38,24 @@ A basic example of usage -
 ...
 
 // setup:
-flockstorm::manager boids{100}; // create simulation with 100 boids
+unsigned int constexpr num_boids{100};
+flockstorm::manager boids{num_boids}; // create simulation with 100 boids
 boids.add_obstacle_sphere(this_sphere.position, this_sphere.radius); // add a sphere-shaped obstacle to avoid
-
+std::vector<vec3f> boid_positions_last{num_boids};
+std::vector<vec3f> boid_positions_next{num_boids};
 ...
 
 // in main loop:
+
+std::vector<vec3f> boid_positions_current{num_boids};
+
 if(time_to_update) {
   // if it's time to update, update the simulation
   boids.goal_position = next_target_position; // optionally update the target position
   
   boids.update(); // update the simulation
 
-  std::swap(boid_positions_last, boid_positions_next); // 
+  std::swap(boid_positions_last, boid_positions_next); // ping-pong between our position containers to avoid copying
   for(unsigned int i = 0; i != boids.num_boids; ++i) {
     boid_positions_next[i] = boids.get_position(i) * world_scale;
     boid_positions_current[i] = boid_positions_last[i];
