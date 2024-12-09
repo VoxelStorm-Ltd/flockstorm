@@ -67,7 +67,7 @@ if(frames_since_last_boids_update == frames_between_boids_updates) {
   // if it's not time to update, interpolate the positions for this render frame:
   auto const factor{static_cast<float>(frames_since_last_boids_update) / static_cast<float>(frames_between_boids_updates)};
   for(unsigned int i{0}; i != boids.num_boids; ++i) {
-    boid_positions_current[i] = boid_positions_next[i].lerp(factor, boid_positions_last[i]);
+    boid_positions_current[i] = boid_positions_last[i].lerp(factor, boid_positions_next[i]);
   }
   ++frames_since_last_boids_update;
 }
