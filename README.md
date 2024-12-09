@@ -43,29 +43,33 @@ flockstorm::manager boids{num_boids}; // create simulation with 100 boids
 boids.add_obstacle_sphere(this_sphere.position, this_sphere.radius); // add a sphere-shaped obstacle to avoid
 std::vector<vec3f> boid_positions_last{num_boids};
 std::vector<vec3f> boid_positions_next{num_boids};
+unsigned int frames_between_boids_updates{10};
+unsigned int frames_since_last_boids_update{0};
 ...
 
 // in main loop:
 
 std::vector<vec3f> boid_positions_current{num_boids};
 
-if(time_to_update) {
+if(frames_since_last_boids_update == frames_between_boids_updates) {
   // if it's time to update, update the simulation
   boids.goal_position = next_target_position; // optionally update the target position
   
   boids.update(); // update the simulation
 
   std::swap(boid_positions_last, boid_positions_next); // ping-pong between our position containers to avoid copying
-  for(unsigned int i = 0; i != boids.num_boids; ++i) {
+  for(unsigned int i{0}; i != boids.num_boids; ++i) {
     boid_positions_next[i] = boids.get_position(i) * world_scale;
     boid_positions_current[i] = boid_positions_last[i];
   }
+  frames_since_last_boids_update = 0;
 } else {
   // if it's not time to update, interpolate the positions for this render frame:
-  for(unsigned int i = 0; i != boids.num_boids; ++i) {
-    float const factor = frames_until_update / update_delay;
+  auto const factor{static_cast<float>(frames_since_last_boids_update) / static_cast<float>(frames_between_boids_updates)};
+  for(unsigned int i{0}; i != boids.num_boids; ++i) {
     boid_positions_current[i] = boid_positions_next[i].lerp(factor, boid_positions_last[i]);
   }
+  ++frames_since_last_boids_update;
 }
 
 // then draw your boids at boid_positions_current
