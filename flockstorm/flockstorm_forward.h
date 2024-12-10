@@ -1,5 +1,4 @@
-#ifndef FLOCKSTORM_FORWARD_H_INCLUDED
-#define FLOCKSTORM_FORWARD_H_INCLUDED
+#pragma once
 
 namespace flockstorm {
 
@@ -15,5 +14,3 @@ struct sphere;
 }
 
 }
-
-#endif // FLOCKSTORM_FORWARD_H_INCLUDED

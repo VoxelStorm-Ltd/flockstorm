@@ -1,5 +1,4 @@
-#ifndef FLOCKSTORM_GRID_BOID_INCLUDED
-#define FLOCKSTORM_GRID_BOID_INCLUDED
+#pragma once
 
 #include "base.h"
 
@@ -20,5 +19,3 @@ struct boid : base {
 };
 
 }
-
-#endif // FLOCKSTORM_GRID_BOID_INCLUDED

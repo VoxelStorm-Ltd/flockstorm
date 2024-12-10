@@ -1,5 +1,4 @@
-#ifndef FLOCKSTORM_GRID_BASE_H_INCLUDED
-#define FLOCKSTORM_GRID_BASE_H_INCLUDED
+#pragma once
 
 #include <vector>
 #include <unordered_map>
@@ -21,5 +20,3 @@ struct base {
 };
 
 }
-
-#endif // FLOCKSTORM_GRID_BASE_H_INCLUDED

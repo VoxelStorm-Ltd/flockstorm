@@ -1,5 +1,4 @@
-#ifndef FLOCKSTORM_OBSTACLE_SPHERE_H_INCLUDED
-#define FLOCKSTORM_OBSTACLE_SPHERE_H_INCLUDED
+#pragma once
 
 #include "vectorstorm/vector/vector3.h"
 
@@ -16,5 +15,3 @@ struct sphere {
 };
 
 }
-
-#endif // FLOCKSTORM_OBSTACLE_SPHERE_H_INCLUDED
