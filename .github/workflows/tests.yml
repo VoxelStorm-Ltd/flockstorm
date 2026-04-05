@@ -22,7 +22,7 @@ jobs:
       - name: Configure
         run: |
           cmake -S tests -B build -G Ninja \
-            -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DFLOCKSTORM_COVERAGE=ON
 
       - name: Build
