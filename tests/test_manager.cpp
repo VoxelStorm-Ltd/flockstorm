@@ -327,7 +327,7 @@ TEST_CASE("manager - update_partial produces the same result as update", "[manag
   m_partial.update_partial(n / 2, n);
   m_partial.update_partial_finalise();
 
-  // Results must be bit-identical
+  // Results must match to floating-point tolerance
   for(unsigned int i = 0; i < n; ++i) {
     auto const &p1 = m_full.get_position(i);
     auto const &p2 = m_partial.get_position(i);

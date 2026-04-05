@@ -6,9 +6,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Silence FindBoost deprecation warning (CMake 3.27+: use BoostConfig.cmake)
-cmake_policy(SET CMP0167 NEW)
+if(POLICY CMP0167)
+  cmake_policy(SET CMP0167 NEW)
+endif()
 # Allow FetchContent_Populate for repos that have no CMakeLists.txt (CMake 3.28+ deprecates it)
-cmake_policy(SET CMP0169 OLD)
+if(POLICY CMP0169)
+  cmake_policy(SET CMP0169 OLD)
+endif()
 
 include(FetchContent)
 
