@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/vectorstorm-subbuild/CMakeFiles/vectorstorm-populate"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/vectorstorm-subbuild/CMakeFiles/vectorstorm-populate.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/vectorstorm-subbuild/CMakeFiles/vectorstorm-populate-complete.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/vectorstorm-subbuild/vectorstorm-populate-prefix/src/vectorstorm-populate-stamp/vectorstorm-populate-build.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/vectorstorm-subbuild/vectorstorm-populate-prefix/src/vectorstorm-populate-stamp/vectorstorm-populate-configure.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/vectorstorm-subbuild/vectorstorm-populate-prefix/src/vectorstorm-populate-stamp/vectorstorm-populate-download.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/vectorstorm-subbuild/vectorstorm-populate-prefix/src/vectorstorm-populate-stamp/vectorstorm-populate-install.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/vectorstorm-subbuild/vectorstorm-populate-prefix/src/vectorstorm-populate-stamp/vectorstorm-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/vectorstorm-subbuild/vectorstorm-populate-prefix/src/vectorstorm-populate-stamp/vectorstorm-populate-patch.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/vectorstorm-subbuild/vectorstorm-populate-prefix/src/vectorstorm-populate-stamp/vectorstorm-populate-test.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/vectorstorm-subbuild/vectorstorm-populate-prefix/src/vectorstorm-populate-stamp/vectorstorm-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vectorstorm-populate"
+		],
+		"name" : "vectorstorm-populate"
+	}
+}

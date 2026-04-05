@@ -1,0 +1,975 @@
+Start testing: Apr 05 17:50 UTC
+----------------------------------------------------------
+1/42 Testing: get_cell computes correct grid cell
+1/42 Test: get_cell computes correct grid cell
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "get_cell computes correct grid cell"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"get_cell computes correct grid cell" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "get_cell computes correct grid cell"
+Randomness seeded to: 3744032097
+===============================================================================
+All tests passed (20 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"get_cell computes correct grid cell" end time: Apr 05 17:50 UTC
+"get_cell computes correct grid cell" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/42 Testing: grid::base - clear empties the grid
+2/42 Test: grid::base - clear empties the grid
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "grid::base - clear empties the grid"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"grid::base - clear empties the grid" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "grid::base - clear empties the grid"
+Randomness seeded to: 1701108344
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid::base - clear empties the grid" end time: Apr 05 17:50 UTC
+"grid::base - clear empties the grid" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/42 Testing: grid::base - clear is idempotent
+3/42 Test: grid::base - clear is idempotent
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "grid::base - clear is idempotent"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"grid::base - clear is idempotent" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "grid::base - clear is idempotent"
+Randomness seeded to: 1748591877
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid::base - clear is idempotent" end time: Apr 05 17:50 UTC
+"grid::base - clear is idempotent" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/42 Testing: grid::base - default scale is 1.0
+4/42 Test: grid::base - default scale is 1.0
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "grid::base - default scale is 1.0"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"grid::base - default scale is 1.0" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "grid::base - default scale is 1.0"
+Randomness seeded to: 2027358639
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid::base - default scale is 1.0" end time: Apr 05 17:50 UTC
+"grid::base - default scale is 1.0" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/42 Testing: grid::base - get_cell delegates correctly to the free function
+5/42 Test: grid::base - get_cell delegates correctly to the free function
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "grid::base - get_cell delegates correctly to the free function"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"grid::base - get_cell delegates correctly to the free function" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "grid::base - get_cell delegates correctly to the free function"
+Randomness seeded to: 2333684457
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid::base - get_cell delegates correctly to the free function" end time: Apr 05 17:50 UTC
+"grid::base - get_cell delegates correctly to the free function" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/42 Testing: grid::base - get_cell respects the scale member
+6/42 Test: grid::base - get_cell respects the scale member
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "grid::base - get_cell respects the scale member"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"grid::base - get_cell respects the scale member" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "grid::base - get_cell respects the scale member"
+Randomness seeded to: 998840563
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid::base - get_cell respects the scale member" end time: Apr 05 17:50 UTC
+"grid::base - get_cell respects the scale member" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/42 Testing: grid::base - grid entries can be added and retrieved
+7/42 Test: grid::base - grid entries can be added and retrieved
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "grid::base - grid entries can be added and retrieved"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"grid::base - grid entries can be added and retrieved" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "grid::base - grid entries can be added and retrieved"
+Randomness seeded to: 3981783057
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid::base - grid entries can be added and retrieved" end time: Apr 05 17:50 UTC
+"grid::base - grid entries can be added and retrieved" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/42 Testing: grid::boid - construction
+8/42 Test: grid::boid - construction
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "grid::boid - construction"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"grid::boid - construction" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "grid::boid - construction"
+Randomness seeded to: 3164512421
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid::boid - construction" end time: Apr 05 17:50 UTC
+"grid::boid - construction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/42 Testing: grid::boid - update is a no-op when the boid stays in the same cell
+9/42 Test: grid::boid - update is a no-op when the boid stays in the same cell
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "grid::boid - update is a no-op when the boid stays in the same cell"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"grid::boid - update is a no-op when the boid stays in the same cell" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "grid::boid - update is a no-op when the boid stays in the same cell"
+Randomness seeded to: 900867491
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid::boid - update is a no-op when the boid stays in the same cell" end time: Apr 05 17:50 UTC
+"grid::boid - update is a no-op when the boid stays in the same cell" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/42 Testing: grid::boid - update moves boid to a new cell
+10/42 Test: grid::boid - update moves boid to a new cell
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "grid::boid - update moves boid to a new cell"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"grid::boid - update moves boid to a new cell" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "grid::boid - update moves boid to a new cell"
+Randomness seeded to: 2561314145
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid::boid - update moves boid to a new cell" end time: Apr 05 17:50 UTC
+"grid::boid - update moves boid to a new cell" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/42 Testing: grid::boid - update removes boid from a cell shared with other boids
+11/42 Test: grid::boid - update removes boid from a cell shared with other boids
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "grid::boid - update removes boid from a cell shared with other boids"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"grid::boid - update removes boid from a cell shared with other boids" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "grid::boid - update removes boid from a cell shared with other boids"
+Randomness seeded to: 2728863872
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid::boid - update removes boid from a cell shared with other boids" end time: Apr 05 17:50 UTC
+"grid::boid - update removes boid from a cell shared with other boids" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/42 Testing: grid::boid - multiple sequential updates track the correct cell
+12/42 Test: grid::boid - multiple sequential updates track the correct cell
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "grid::boid - multiple sequential updates track the correct cell"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"grid::boid - multiple sequential updates track the correct cell" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "grid::boid - multiple sequential updates track the correct cell"
+Randomness seeded to: 63036462
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid::boid - multiple sequential updates track the correct cell" end time: Apr 05 17:50 UTC
+"grid::boid - multiple sequential updates track the correct cell" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/42 Testing: sphere obstacle - constructor sets position and radius
+13/42 Test: sphere obstacle - constructor sets position and radius
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "sphere obstacle - constructor sets position and radius"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"sphere obstacle - constructor sets position and radius" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "sphere obstacle - constructor sets position and radius"
+Randomness seeded to: 2019301196
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"sphere obstacle - constructor sets position and radius" end time: Apr 05 17:50 UTC
+"sphere obstacle - constructor sets position and radius" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/42 Testing: sphere obstacle - constructor computes collision_avoidance_range_sq
+14/42 Test: sphere obstacle - constructor computes collision_avoidance_range_sq
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "sphere obstacle - constructor computes collision_avoidance_range_sq"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"sphere obstacle - constructor computes collision_avoidance_range_sq" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "sphere obstacle - constructor computes collision_avoidance_range_sq"
+Randomness seeded to: 2841698472
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"sphere obstacle - constructor computes collision_avoidance_range_sq" end time: Apr 05 17:50 UTC
+"sphere obstacle - constructor computes collision_avoidance_range_sq" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/42 Testing: sphere obstacle - update recomputes collision_avoidance_range_sq
+15/42 Test: sphere obstacle - update recomputes collision_avoidance_range_sq
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "sphere obstacle - update recomputes collision_avoidance_range_sq"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"sphere obstacle - update recomputes collision_avoidance_range_sq" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "sphere obstacle - update recomputes collision_avoidance_range_sq"
+Randomness seeded to: 18917025
+===============================================================================
+All tests passed (7 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"sphere obstacle - update recomputes collision_avoidance_range_sq" end time: Apr 05 17:50 UTC
+"sphere obstacle - update recomputes collision_avoidance_range_sq" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/42 Testing: sphere obstacle - position is stored correctly
+16/42 Test: sphere obstacle - position is stored correctly
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "sphere obstacle - position is stored correctly"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"sphere obstacle - position is stored correctly" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "sphere obstacle - position is stored correctly"
+Randomness seeded to: 2953264341
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"sphere obstacle - position is stored correctly" end time: Apr 05 17:50 UTC
+"sphere obstacle - position is stored correctly" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/42 Testing: manager - construction stores num_boids
+17/42 Test: manager - construction stores num_boids
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - construction stores num_boids"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - construction stores num_boids" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - construction stores num_boids"
+Randomness seeded to: 1162575178
+FlockStorm: Initialising with 5 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - construction stores num_boids" end time: Apr 05 17:50 UTC
+"manager - construction stores num_boids" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/42 Testing: manager - default simulation parameters
+18/42 Test: manager - default simulation parameters
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - default simulation parameters"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - default simulation parameters" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - default simulation parameters"
+Randomness seeded to: 1226277431
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (9 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - default simulation parameters" end time: Apr 05 17:50 UTC
+"manager - default simulation parameters" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/42 Testing: manager - obstacles container starts empty
+19/42 Test: manager - obstacles container starts empty
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - obstacles container starts empty"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - obstacles container starts empty" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - obstacles container starts empty"
+Randomness seeded to: 3293692074
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - obstacles container starts empty" end time: Apr 05 17:50 UTC
+"manager - obstacles container starts empty" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/42 Testing: manager - set_position and get_position round-trip
+20/42 Test: manager - set_position and get_position round-trip
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - set_position and get_position round-trip"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - set_position and get_position round-trip" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - set_position and get_position round-trip"
+Randomness seeded to: 2337965976
+FlockStorm: Initialising with 3 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - set_position and get_position round-trip" end time: Apr 05 17:50 UTC
+"manager - set_position and get_position round-trip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/42 Testing: manager - set_velocity and get_velocity round-trip
+21/42 Test: manager - set_velocity and get_velocity round-trip
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - set_velocity and get_velocity round-trip"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - set_velocity and get_velocity round-trip" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - set_velocity and get_velocity round-trip"
+Randomness seeded to: 1113946731
+FlockStorm: Initialising with 3 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - set_velocity and get_velocity round-trip" end time: Apr 05 17:50 UTC
+"manager - set_velocity and get_velocity round-trip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/42 Testing: manager - set_acceleration and get_acceleration round-trip
+22/42 Test: manager - set_acceleration and get_acceleration round-trip
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - set_acceleration and get_acceleration round-trip"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - set_acceleration and get_acceleration round-trip" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - set_acceleration and get_acceleration round-trip"
+Randomness seeded to: 2888142198
+FlockStorm: Initialising with 3 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - set_acceleration and get_acceleration round-trip" end time: Apr 05 17:50 UTC
+"manager - set_acceleration and get_acceleration round-trip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/42 Testing: manager - setting position of all boids independently
+23/42 Test: manager - setting position of all boids independently
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - setting position of all boids independently"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - setting position of all boids independently" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - setting position of all boids independently"
+Randomness seeded to: 2680169438
+FlockStorm: Initialising with 4 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - setting position of all boids independently" end time: Apr 05 17:50 UTC
+"manager - setting position of all boids independently" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/42 Testing: manager - add_obstacle_sphere returns correct index
+24/42 Test: manager - add_obstacle_sphere returns correct index
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - add_obstacle_sphere returns correct index"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - add_obstacle_sphere returns correct index" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - add_obstacle_sphere returns correct index"
+Randomness seeded to: 4117884689
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - add_obstacle_sphere returns correct index" end time: Apr 05 17:50 UTC
+"manager - add_obstacle_sphere returns correct index" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/42 Testing: manager - multiple obstacles get sequential indices
+25/42 Test: manager - multiple obstacles get sequential indices
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - multiple obstacles get sequential indices"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - multiple obstacles get sequential indices" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - multiple obstacles get sequential indices"
+Randomness seeded to: 1970351919
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - multiple obstacles get sequential indices" end time: Apr 05 17:50 UTC
+"manager - multiple obstacles get sequential indices" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/42 Testing: manager - add_obstacle_sphere stores position and radius
+26/42 Test: manager - add_obstacle_sphere stores position and radius
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - add_obstacle_sphere stores position and radius"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - add_obstacle_sphere stores position and radius" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - add_obstacle_sphere stores position and radius"
+Randomness seeded to: 1676818404
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - add_obstacle_sphere stores position and radius" end time: Apr 05 17:50 UTC
+"manager - add_obstacle_sphere stores position and radius" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/42 Testing: manager - obstacles.clear() removes all obstacles
+27/42 Test: manager - obstacles.clear() removes all obstacles
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - obstacles.clear() removes all obstacles"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - obstacles.clear() removes all obstacles" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - obstacles.clear() removes all obstacles"
+Randomness seeded to: 731442912
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - obstacles.clear() removes all obstacles" end time: Apr 05 17:50 UTC
+"manager - obstacles.clear() removes all obstacles" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/42 Testing: manager - distribute_boids_randomly places all boids within bounds
+28/42 Test: manager - distribute_boids_randomly places all boids within bounds
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - distribute_boids_randomly places all boids within bounds"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - distribute_boids_randomly places all boids within bounds" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - distribute_boids_randomly places all boids within bounds"
+Randomness seeded to: 1387765990
+FlockStorm: Initialising with 20 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     17 elements, size 168B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              7 elements, size 168B
+FlockStorm: Memory usage: Flock centering:                7 elements, size 168B
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (120 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - distribute_boids_randomly places all boids within bounds" end time: Apr 05 17:50 UTC
+"manager - distribute_boids_randomly places all boids within bounds" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/42 Testing: manager - distribute_boids_randomly zeroes all velocities
+29/42 Test: manager - distribute_boids_randomly zeroes all velocities
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - distribute_boids_randomly zeroes all velocities"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - distribute_boids_randomly zeroes all velocities" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - distribute_boids_randomly zeroes all velocities"
+Randomness seeded to: 3158519605
+FlockStorm: Initialising with 5 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     4 elements, size 108B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              3 elements, size 108B
+FlockStorm: Memory usage: Flock centering:                3 elements, size 108B
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (15 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - distribute_boids_randomly zeroes all velocities" end time: Apr 05 17:50 UTC
+"manager - distribute_boids_randomly zeroes all velocities" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/42 Testing: manager - distribute_boids_randomly is deterministic given the same seed
+30/42 Test: manager - distribute_boids_randomly is deterministic given the same seed
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - distribute_boids_randomly is deterministic given the same seed"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - distribute_boids_randomly is deterministic given the same seed" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - distribute_boids_randomly is deterministic given the same seed"
+Randomness seeded to: 535597097
+FlockStorm: Initialising with 10 boids.
+FlockStorm: Initialising with 10 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     9 elements, size 128B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              10 elements, size 128B
+FlockStorm: Memory usage: Flock centering:                9 elements, size 128B
+FlockStorm: Memory usage: Collision avoidance (boid):     9 elements, size 128B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              10 elements, size 128B
+FlockStorm: Memory usage: Flock centering:                9 elements, size 128B
+FlockStorm: Shutting down.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (30 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - distribute_boids_randomly is deterministic given the same seed" end time: Apr 05 17:50 UTC
+"manager - distribute_boids_randomly is deterministic given the same seed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/42 Testing: manager - distribute_boids_randomly produces different results for different seeds
+31/42 Test: manager - distribute_boids_randomly produces different results for different seeds
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - distribute_boids_randomly produces different results for different seeds"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - distribute_boids_randomly produces different results for different seeds" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - distribute_boids_randomly produces different results for different seeds"
+Randomness seeded to: 824283208
+FlockStorm: Initialising with 10 boids.
+FlockStorm: Initialising with 10 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     10 elements, size 128B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              10 elements, size 128B
+FlockStorm: Memory usage: Flock centering:                10 elements, size 128B
+FlockStorm: Memory usage: Collision avoidance (boid):     10 elements, size 128B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              10 elements, size 128B
+FlockStorm: Memory usage: Flock centering:                8 elements, size 128B
+FlockStorm: Shutting down.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - distribute_boids_randomly produces different results for different seeds" end time: Apr 05 17:50 UTC
+"manager - distribute_boids_randomly produces different results for different seeds" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/42 Testing: manager - set_goal_position_randomly places goal within bounds
+32/42 Test: manager - set_goal_position_randomly places goal within bounds
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - set_goal_position_randomly places goal within bounds"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - set_goal_position_randomly places goal within bounds" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - set_goal_position_randomly places goal within bounds"
+Randomness seeded to: 2169443179
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - set_goal_position_randomly places goal within bounds" end time: Apr 05 17:50 UTC
+"manager - set_goal_position_randomly places goal within bounds" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/42 Testing: manager - update_precomputed_quantities can be called after parameter changes
+33/42 Test: manager - update_precomputed_quantities can be called after parameter changes
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - update_precomputed_quantities can be called after parameter changes"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - update_precomputed_quantities can be called after parameter changes" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - update_precomputed_quantities can be called after parameter changes"
+Randomness seeded to: 3880218627
+FlockStorm: Initialising with 2 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - update_precomputed_quantities can be called after parameter changes" end time: Apr 05 17:50 UTC
+"manager - update_precomputed_quantities can be called after parameter changes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/42 Testing: manager - update_precomputed_quantities updates sphere obstacle ranges
+34/42 Test: manager - update_precomputed_quantities updates sphere obstacle ranges
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - update_precomputed_quantities updates sphere obstacle ranges"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - update_precomputed_quantities updates sphere obstacle ranges" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - update_precomputed_quantities updates sphere obstacle ranges"
+Randomness seeded to: 1184490991
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - update_precomputed_quantities updates sphere obstacle ranges" end time: Apr 05 17:50 UTC
+"manager - update_precomputed_quantities updates sphere obstacle ranges" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/42 Testing: manager - single boid moves toward the goal after one update
+35/42 Test: manager - single boid moves toward the goal after one update
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - single boid moves toward the goal after one update"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - single boid moves toward the goal after one update" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - single boid moves toward the goal after one update"
+Randomness seeded to: 1292000364
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     1 elements, size 92B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              1 elements, size 92B
+FlockStorm: Memory usage: Flock centering:                1 elements, size 92B
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - single boid moves toward the goal after one update" end time: Apr 05 17:50 UTC
+"manager - single boid moves toward the goal after one update" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/42 Testing: manager - single boid approaches goal over multiple updates
+36/42 Test: manager - single boid approaches goal over multiple updates
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - single boid approaches goal over multiple updates"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - single boid approaches goal over multiple updates" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - single boid approaches goal over multiple updates"
+Randomness seeded to: 1100586279
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     1 elements, size 92B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              1 elements, size 92B
+FlockStorm: Memory usage: Flock centering:                1 elements, size 92B
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (21 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - single boid approaches goal over multiple updates" end time: Apr 05 17:50 UTC
+"manager - single boid approaches goal over multiple updates" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/42 Testing: manager - damping factor reduces velocity when there is no net force
+37/42 Test: manager - damping factor reduces velocity when there is no net force
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - damping factor reduces velocity when there is no net force"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - damping factor reduces velocity when there is no net force" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - damping factor reduces velocity when there is no net force"
+Randomness seeded to: 2224522840
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     1 elements, size 92B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              1 elements, size 92B
+FlockStorm: Memory usage: Flock centering:                1 elements, size 92B
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - damping factor reduces velocity when there is no net force" end time: Apr 05 17:50 UTC
+"manager - damping factor reduces velocity when there is no net force" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/42 Testing: manager - two nearby boids are repelled from each other
+38/42 Test: manager - two nearby boids are repelled from each other
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - two nearby boids are repelled from each other"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - two nearby boids are repelled from each other" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - two nearby boids are repelled from each other"
+Randomness seeded to: 3843935694
+FlockStorm: Initialising with 2 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     1 elements, size 96B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              1 elements, size 96B
+FlockStorm: Memory usage: Flock centering:                1 elements, size 96B
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - two nearby boids are repelled from each other" end time: Apr 05 17:50 UTC
+"manager - two nearby boids are repelled from each other" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/42 Testing: manager - update_partial produces the same result as update
+39/42 Test: manager - update_partial produces the same result as update
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - update_partial produces the same result as update"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - update_partial produces the same result as update" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - update_partial produces the same result as update"
+Randomness seeded to: 4094925254
+FlockStorm: Initialising with 6 boids.
+FlockStorm: Initialising with 6 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     6 elements, size 112B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              5 elements, size 112B
+FlockStorm: Memory usage: Flock centering:                5 elements, size 112B
+FlockStorm: Memory usage: Collision avoidance (boid):     6 elements, size 112B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              5 elements, size 112B
+FlockStorm: Memory usage: Flock centering:                5 elements, size 112B
+FlockStorm: Shutting down.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (36 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - update_partial produces the same result as update" end time: Apr 05 17:50 UTC
+"manager - update_partial produces the same result as update" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/42 Testing: manager - populate_grids can be called without obstacles
+40/42 Test: manager - populate_grids can be called without obstacles
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - populate_grids can be called without obstacles"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - populate_grids can be called without obstacles" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - populate_grids can be called without obstacles"
+Randomness seeded to: 3920174748
+FlockStorm: Initialising with 3 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     3 elements, size 100B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              2 elements, size 100B
+FlockStorm: Memory usage: Flock centering:                2 elements, size 100B
+FlockStorm: Memory usage: Collision avoidance (boid):     3 elements, size 100B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              2 elements, size 100B
+FlockStorm: Memory usage: Flock centering:                2 elements, size 100B
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - populate_grids can be called without obstacles" end time: Apr 05 17:50 UTC
+"manager - populate_grids can be called without obstacles" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/42 Testing: manager - populate_grids can be called with obstacles
+41/42 Test: manager - populate_grids can be called with obstacles
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - populate_grids can be called with obstacles"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - populate_grids can be called with obstacles" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - populate_grids can be called with obstacles"
+Randomness seeded to: 1174872030
+FlockStorm: Initialising with 3 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     3 elements, size 100B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 20 elements, size 144B
+FlockStorm: Memory usage: Velocity matching:              2 elements, size 100B
+FlockStorm: Memory usage: Flock centering:                2 elements, size 100B
+FlockStorm: Memory usage: Collision avoidance (boid):     3 elements, size 100B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 20 elements, size 144B
+FlockStorm: Memory usage: Velocity matching:              2 elements, size 100B
+FlockStorm: Memory usage: Flock centering:                2 elements, size 100B
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - populate_grids can be called with obstacles" end time: Apr 05 17:50 UTC
+"manager - populate_grids can be called with obstacles" time elapsed: 00:00:00
+----------------------------------------------------------
+
+42/42 Testing: manager - boid avoids a nearby sphere obstacle
+42/42 Test: manager - boid avoids a nearby sphere obstacle
+Command: "/home/runner/work/flockstorm/flockstorm/build/tests/flockstorm_tests" "manager - boid avoids a nearby sphere obstacle"
+Directory: /home/runner/work/flockstorm/flockstorm/build/tests
+"manager - boid avoids a nearby sphere obstacle" start time: Apr 05 17:50 UTC
+Output:
+----------------------------------------------------------
+Filters: "manager - boid avoids a nearby sphere obstacle"
+Randomness seeded to: 4142362910
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     1 elements, size 92B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 20 elements, size 144B
+FlockStorm: Memory usage: Velocity matching:              1 elements, size 92B
+FlockStorm: Memory usage: Flock centering:                1 elements, size 92B
+FlockStorm: Initialising with 1 boids.
+FlockStorm: Memory usage: Collision avoidance (boid):     1 elements, size 92B
+FlockStorm: Memory usage: Collision avoidance (obstacle): 0 elements, size 64B
+FlockStorm: Memory usage: Velocity matching:              1 elements, size 92B
+FlockStorm: Memory usage: Flock centering:                1 elements, size 92B
+FlockStorm: Shutting down.
+FlockStorm: Shutting down.
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"manager - boid avoids a nearby sphere obstacle" end time: Apr 05 17:50 UTC
+"manager - boid avoids a nearby sphere obstacle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 05 17:50 UTC

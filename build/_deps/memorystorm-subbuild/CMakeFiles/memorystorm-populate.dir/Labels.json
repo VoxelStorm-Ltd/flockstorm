@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/memorystorm-subbuild/CMakeFiles/memorystorm-populate"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/memorystorm-subbuild/CMakeFiles/memorystorm-populate.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/memorystorm-subbuild/CMakeFiles/memorystorm-populate-complete.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/memorystorm-subbuild/memorystorm-populate-prefix/src/memorystorm-populate-stamp/memorystorm-populate-build.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/memorystorm-subbuild/memorystorm-populate-prefix/src/memorystorm-populate-stamp/memorystorm-populate-configure.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/memorystorm-subbuild/memorystorm-populate-prefix/src/memorystorm-populate-stamp/memorystorm-populate-download.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/memorystorm-subbuild/memorystorm-populate-prefix/src/memorystorm-populate-stamp/memorystorm-populate-install.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/memorystorm-subbuild/memorystorm-populate-prefix/src/memorystorm-populate-stamp/memorystorm-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/memorystorm-subbuild/memorystorm-populate-prefix/src/memorystorm-populate-stamp/memorystorm-populate-patch.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/memorystorm-subbuild/memorystorm-populate-prefix/src/memorystorm-populate-stamp/memorystorm-populate-test.rule"
+		},
+		{
+			"file" : "/home/runner/work/flockstorm/flockstorm/build/_deps/memorystorm-subbuild/memorystorm-populate-prefix/src/memorystorm-populate-stamp/memorystorm-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"memorystorm-populate"
+		],
+		"name" : "memorystorm-populate"
+	}
+}
