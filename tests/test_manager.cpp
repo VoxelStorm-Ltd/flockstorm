@@ -1,5 +1,6 @@
 #include <catch2/catch_test_macros.hpp>
 #include <catch2/catch_approx.hpp>
+#include <cmath>
 #include "flockstorm/manager.h"
 #include "vectorstorm/aabb/aabb3.h"
 
@@ -168,11 +169,14 @@ TEST_CASE("manager - distribute_boids_randomly produces different results for di
   m1.distribute_boids_randomly(bounds, 1);
   m2.distribute_boids_randomly(bounds, 2);
 
+  float const epsilon = 1e-6f;
   bool any_different = false;
   for(unsigned int i = 0; i < n; ++i) {
     auto const &p1 = m1.get_position(i);
     auto const &p2 = m2.get_position(i);
-    if(p1.x != p2.x || p1.y != p2.y || p1.z != p2.z) {
+    if(std::abs(p1.x - p2.x) > epsilon ||
+       std::abs(p1.y - p2.y) > epsilon ||
+       std::abs(p1.z - p2.z) > epsilon) {
       any_different = true;
       break;
     }
