@@ -1,10 +1,8 @@
 #include "boid.h"
+#include <algorithm>
 #ifndef NDEBUG
   #include <iostream>
 #endif // NDEBUG
-#ifdef VECTORSTORM_NO_BOOST
-  #include <algorithm>
-#endif // VECTORSTORM_NO_BOOST
 
 namespace flockstorm::grid {
 
