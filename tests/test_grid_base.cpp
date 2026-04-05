@@ -28,14 +28,14 @@ TEST_CASE("grid::base - get_cell delegates correctly to the free function", "[gr
   g.scale = 1.0f;
 
   SECTION("positive coordinates") {
-    auto const cell = g.get_cell({2.5f, 3.5f, 4.5f});
+    auto const cell{g.get_cell({2.5f, 3.5f, 4.5f})};
     REQUIRE(cell.x == 2);
     REQUIRE(cell.y == 3);
     REQUIRE(cell.z == 4);
   }
 
   SECTION("negative coordinates") {
-    auto const cell = g.get_cell({-0.1f, -1.0f, -2.9f});
+    auto const cell{g.get_cell({-0.1f, -1.0f, -2.9f})};
     REQUIRE(cell.x == -1);
     REQUIRE(cell.y == -1);
     REQUIRE(cell.z == -3);
@@ -45,7 +45,7 @@ TEST_CASE("grid::base - get_cell delegates correctly to the free function", "[gr
 TEST_CASE("grid::base - get_cell respects the scale member", "[grid][base]") {
   flockstorm::grid::base g;
   g.scale = 5.0f;
-  auto const cell = g.get_cell({12.0f, 12.0f, 12.0f});
+  auto const cell{g.get_cell({12.0f, 12.0f, 12.0f})};
   // floor(12.0 / 5.0) == 2
   REQUIRE(cell.x == 2);
   REQUIRE(cell.y == 2);
