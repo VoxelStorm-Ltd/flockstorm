@@ -1,4 +1,7 @@
 # FlockStorm
+[![Tests](https://github.com/VoxelStorm-Ltd/flockstorm/actions/workflows/tests.yml/badge.svg)](https://github.com/VoxelStorm-Ltd/flockstorm/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/VoxelStorm-Ltd/flockstorm/branch/main/graph/badge.svg)](https://codecov.io/gh/VoxelStorm-Ltd/flockstorm)
+
 C++ "[Boids](https://en.wikipedia.org/wiki/Boids)" high performance flocking library by VoxelStorm, as used in the background of the game [sphereFACE](http://sphereface.com).
 
 The basic intent is to produce a visually believable real-time flocking simulation for large numbers of entities, with minimal performance cost.  This specific design is intended to be suitable for use in games and other real-time graphics applications, where the flocking simulation is not the primary purpose of the software - a simulation that can run below the game's target framerate, and the game engine can interpolate between simulation ticks.

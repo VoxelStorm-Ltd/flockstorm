@@ -1,0 +1,61 @@
+name: Tests
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  test:
+    name: Build and test (Linux)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build libboost-dev lcov
+
+      - name: Configure
+        run: |
+          cmake -S tests -B build -G Ninja \
+            -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+            -DFLOCKSTORM_COVERAGE=ON
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Run tests
+        run: ctest --test-dir build --output-on-failure
+
+      - name: Collect coverage data
+        run: |
+          lcov --capture \
+               --directory build \
+               --output-file coverage.info \
+               --ignore-errors mismatch
+
+      - name: Filter coverage data
+        run: |
+          lcov --remove coverage.info \
+               '/usr/*' \
+               '*/catch2/*' \
+               '*/vectorstorm/*' \
+               '*/memorystorm/*' \
+               '*/tests/*' \
+               --output-file coverage.info \
+               --ignore-errors unused
+
+      - name: Show coverage summary
+        run: lcov --list coverage.info
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: coverage.info
+          fail_ci_if_error: false
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
